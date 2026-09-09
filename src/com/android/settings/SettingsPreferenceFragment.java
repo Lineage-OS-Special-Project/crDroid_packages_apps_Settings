@@ -47,7 +47,7 @@ import androidx.preference.PreferenceScreen;
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
-import com.android.crdroid.utils.IconTinterUtils;
+import com.android.losp.utils.IconTinterUtils;
 
 import com.android.settings.core.InstrumentedPreferenceFragment;
 import com.android.settings.core.instrumentation.InstrumentedDialogFragment;
@@ -65,7 +65,7 @@ import com.android.settingslib.preference.PreferenceScreenCreator;
 import com.android.settingslib.search.Indexable;
 import com.android.settingslib.widget.LayoutPreference;
 
-import com.crdroid.settings.preferences.CustomDialogPref;
+import com.losp.settings.preferences.CustomDialogPref;
 
 import com.google.android.material.appbar.AppBarLayout;
 import com.google.android.setupcompat.util.WizardManagerHelper;

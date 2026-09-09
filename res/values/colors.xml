@@ -298,4 +298,6 @@
 
    <color name="primary_text_disable_only_material_light">@*android:color/primary_text_disable_only_material_light</color>
 
+    <color name="losp_teal">#14B8A6</color>
+    <color name="homepage_losp_modcenter_foreground">#111827</color>
 </resources>

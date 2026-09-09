@@ -1,5 +1,5 @@
 /*
- * Copyright (C) 2026 crDroid Android Project
+ * Copyright (C) 2026 Lineage-OS-Special-Project (LOSP)
  * SPDX-License-Identifier: Apache-2.0
  */
 
@@ -135,7 +135,7 @@ class BuildMaintainerPreference :
 
     private fun getCodenameCandidates(): Set<String> {
         val result = LinkedHashSet<String>()
-        addIfNotEmpty(result, SystemProperties.get("ro.crdroid.device", null))
+        addIfNotEmpty(result, SystemProperties.get("ro.losp.device", null))
         addIfNotEmpty(result, SystemProperties.get("ro.product.device", null))
         addIfNotEmpty(result, SystemProperties.get("ro.product.vendor.device", null))
         addIfNotEmpty(result, SystemProperties.get("ro.build.product", null))
@@ -230,7 +230,7 @@ class BuildMaintainerPreference :
     companion object {
         private const val TAG = "BuildMaintainerPreference"
         private const val OTA_JSON_URL =
-            "https://raw.githubusercontent.com/crdroidandroid/" +
-                "android_vendor_crDroidOTA/refs/heads/16.0/%s.json"
+            "https://raw.githubusercontent.com/lospandroid/" +
+                "android_vendor_LOSPOTA/refs/heads/16.0/%s.json"
     }
 }

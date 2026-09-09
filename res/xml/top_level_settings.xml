@@ -57,13 +57,13 @@
         android:layout="@layout/settingslib_expressive_untitled_preference_category">
 
         <com.android.settings.widget.HomepagePreference
-            android:fragment="com.crdroid.settings.crDroidSettingsLayout"
+            android:fragment="com.losp.settings.ModCenterLayout"
             android:icon="@drawable/ic_settings_cogs_filled"
-            android:key="top_level_crdroid"
+            android:key="top_level_losp"
             android:order="-50"
-            android:title="@string/crdroid_settings_title"
-            android:summary="@string/crdroid_settings_summary"
-            settings:controller="com.crdroid.settings.TopLevelSettingsPreferenceController"/>
+            android:title="@string/losp_modcenter_title"
+            android:summary="@string/losp_modcenter_summary"
+            settings:controller="com.losp.settings.TopLevelSettingsPreferenceController"/>
 
         <com.android.settings.widget.HomepagePreference
             android:fragment="com.android.settings.applications.AppDashboardFragment"
