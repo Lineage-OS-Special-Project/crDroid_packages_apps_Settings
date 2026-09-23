@@ -1,5 +1,5 @@
 /*
- * Copyright (C) crDroid Android Project
+ * Copyright (C) Lineage-OS-Special-Project (LOSP)
  * SPDX-License-Identifier: Apache-2.0
  */
 

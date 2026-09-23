@@ -1,12 +1,12 @@
 /*
- * SPDX-FileCopyrightText: crDroid Android Project
+ * SPDX-FileCopyrightText: LOSP Android Project
  * SPDX-License-Identifier: Apache-2.0
  */
 
 package com.android.settings.display.darkmode
 
 import com.android.settings.R
-import com.crdroid.settings.preferences.BaseAppListSettingsFragment
+import com.losp.settings.preferences.BaseAppListSettingsFragment
 
 class DarkThemePerAppSettings : BaseAppListSettingsFragment() {
 

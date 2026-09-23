@@ -655,7 +655,7 @@ public class Settings extends SettingsActivity {
     }
     public static class SafetyCenterActivity extends SettingsActivity { }
 
-    public static class crDroidSettingsLayoutActivity extends SettingsActivity {}
+    public static class ModCenterLayoutActivity extends SettingsActivity {}
 
     public static class DevRunningServicesActivity extends SettingsActivity { /* empty */ }
 

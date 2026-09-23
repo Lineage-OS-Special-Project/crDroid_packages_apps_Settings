@@ -1,7 +1,7 @@
 /*
  * Copyright (C) 2022 Project Kaleidoscope
  * Copyright (C) 2022 FlamingoOS Project
- * Copyright (C) 2024 crDroid Android Project
+ * Copyright (C) 2024 Lineage-OS-Special-Project (LOSP)
  *
  * Licensed under the Apache License, Version 2.0 (the "License");
  * you may not use this file except in compliance with the License.

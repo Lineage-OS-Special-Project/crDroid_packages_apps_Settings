@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <!--
-     Copyright (C) 2016-2026 crDroid Android Project
+     Copyright (C) 2016-2026 Lineage-OS-Special-Project (LOSP)
 
      Licensed under the Apache License, Version 2.0 (the "License");
      you may not use this file except in compliance with the License.
@@ -34,15 +34,15 @@
             android:key="android.theme.customization.navbar"
             android:title="@string/theme_customization_navbar_title"
             android:summary="@string/theme_customization_navbar_summary"
-            android:fragment="com.crdroid.settings.fragments.ui.NavbarStyles"/>
+            android:fragment="com.losp.settings.fragments.ui.NavbarStyles"/>
 
-        <com.crdroid.settings.preferences.SecureSettingSwitchPreference
+        <com.losp.settings.preferences.SecureSettingSwitchPreference
             android:key="navigationbar_key_order"
             android:title="@string/navbar_invert_layout_title"
             android:summary="@string/navbar_invert_layout_summary"
             android:defaultValue="false" />
 
-        <com.crdroid.settings.preferences.SecureSettingListPreference
+        <com.losp.settings.preferences.SecureSettingListPreference
             android:key="navbar_layout_mode"
             android:title="@string/navbar_layout_title"
             android:summary="%s"

@@ -28,7 +28,7 @@ class LineageLegalPreference(override val key: String, @StringRes val defaultTit
     PreferenceMetadata, PreferenceTitleProvider, PreferenceAvailabilityProvider {
 
     private companion object {
-        const val PROPERTY_LINEAGE_LICENSE_URL = "ro.crdroidlegal.url"
+        const val PROPERTY_LINEAGE_LICENSE_URL = "ro.losplegal.url"
     }
 
     private fun getLicenseUrl(): String = SystemProperties.get(PROPERTY_LINEAGE_LICENSE_URL)

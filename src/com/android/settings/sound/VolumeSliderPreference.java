@@ -33,7 +33,7 @@ import androidx.annotation.Nullable;
 import androidx.annotation.VisibleForTesting;
 import androidx.preference.PreferenceViewHolder;
 
-import com.android.crdroid.utils.IconTinterUtils;
+import com.android.losp.utils.IconTinterUtils;
 
 import com.android.internal.jank.InteractionJankMonitor;
 import com.android.settings.R;

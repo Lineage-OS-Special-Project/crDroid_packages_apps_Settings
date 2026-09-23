@@ -40,7 +40,7 @@ import androidx.preference.PreferenceManager;
 import androidx.preference.PreferenceScreen;
 import androidx.preference.SwitchPreferenceCompat;
 
-import com.android.crdroid.utils.IconTinterUtils;
+import com.android.losp.utils.IconTinterUtils;
 
 import com.android.settings.R;
 import com.android.settings.SettingsPreferenceFragment;
