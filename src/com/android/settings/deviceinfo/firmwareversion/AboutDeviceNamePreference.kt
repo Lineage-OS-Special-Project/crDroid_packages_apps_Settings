@@ -1,5 +1,5 @@
 /*
- * SPDX-FileCopyrightText: crDroid Android Project
+ * SPDX-FileCopyrightText: LOSP Android Project
  * SPDX-License-Identifier: GPL-3.0
  */
 

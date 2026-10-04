@@ -1,2 +1,2 @@
-# crDroidSettings
--keep class com.crdroid.settings.**
+# ModCenter
+-keep class com.losp.settings.**
