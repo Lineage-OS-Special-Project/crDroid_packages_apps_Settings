@@ -6229,19 +6229,6 @@
                 <category android:name="android.intent.category.DEFAULT" />
             </intent-filter>
         </activity>
-        <receiver android:name="com.losp.settings.fragments.about.DonateReceiver"
-            android:enabled="true"
-            android:exported="false">
-            <intent-filter android:priority="1000">
-                <action android:name="android.intent.action.BOOT_COMPLETED" />
-                <action android:name="android.intent.action.USER_UNLOCKED" />
-                <category android:name="android.intent.category.DEFAULT" />
-            </intent-filter>
-            <intent-filter>
-                <action android:name="com.losp.settings.action.DONATE_NUDGE" />
-            </intent-filter>
-        </receiver>
-
         <!-- Provide direct entry into Dev settings - Running Services -->
         <activity android:name="Settings$DevRunningServicesActivity"
                 android:label="@string/runningservices_settings_title"
