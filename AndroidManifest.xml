@@ -6438,8 +6438,7 @@
             </intent-filter>
         </receiver>
         <service android:name="com.losp.settings.fragments.ui.doze.DozeService"
-                android:exported="true"
-                android:permission="LOSPDozeService">
+                android:exported="false">
         </service>
 
         <!-- Face enroll -->
