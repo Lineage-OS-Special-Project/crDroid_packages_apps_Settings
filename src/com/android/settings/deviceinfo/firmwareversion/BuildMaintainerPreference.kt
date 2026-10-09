@@ -27,6 +27,7 @@ import java.io.InputStream
 import java.net.HttpURLConnection
 import java.net.URL
 import java.nio.charset.StandardCharsets
+import java.lang.ref.WeakReference
 import java.util.concurrent.Executors
 
 class BuildMaintainerPreference :
@@ -41,6 +42,7 @@ class BuildMaintainerPreference :
     @Volatile private var resolvedMaintainer: String = ""
     @Volatile private var resolvedDonateUrl: String? = null
     @Volatile private var fetchStarted: Boolean = false
+    @Volatile private var boundPreference = WeakReference<Preference>(null)
 
     override val key: String
         get() = "build_maintainer"
@@ -50,6 +52,7 @@ class BuildMaintainerPreference :
 
     override fun bind(preference: Preference, metadata: PreferenceMetadata) {
         super.bind(preference, metadata)
+        boundPreference = WeakReference(preference)
         preference.isCopyingEnabled = true
         preference.onPreferenceClickListener = this
 
@@ -68,7 +71,7 @@ class BuildMaintainerPreference :
 
         if (!fetchStarted) {
             fetchStarted = true
-            fetchMaintainerFromOta(preference, overlayMaintainer, overlayDonateUrl)
+            fetchMaintainerFromOta(overlayMaintainer, overlayDonateUrl)
         }
     }
 
@@ -101,7 +104,6 @@ class BuildMaintainerPreference :
     }
 
     private fun fetchMaintainerFromOta(
-        preference: Preference,
         overlayMaintainer: String,
         overlayDonateUrl: String,
     ) {
@@ -128,7 +130,7 @@ class BuildMaintainerPreference :
                     resolvedDonateUrl = sanitizeUrlOrNull(overlayDonateUrl)
                     Log.d(TAG, "Using fallback overlay maintainer: no eligible OTA entry found")
                 }
-                applyState(preference)
+                boundPreference.get()?.let(::applyState)
             }
         }
     }
