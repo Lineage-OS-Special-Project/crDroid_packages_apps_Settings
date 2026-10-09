@@ -23,6 +23,7 @@ import com.android.settingslib.preference.PreferenceBinding
 import org.json.JSONObject
 import java.io.BufferedInputStream
 import java.io.ByteArrayOutputStream
+import java.io.IOException
 import java.io.InputStream
 import java.net.HttpURLConnection
 import java.net.URL
@@ -164,6 +165,12 @@ class BuildMaintainerPreference :
                 return null
             }
 
+            val contentLength = connection.contentLengthLong
+            if (contentLength > MAX_OTA_RESPONSE_BYTES) {
+                Log.d(TAG, "Rejecting oversized OTA response for $codename ($contentLength bytes)")
+                return null
+            }
+
             val json = readFully(connection.inputStream)
             val root = JSONObject(json)
             val response = root.optJSONArray("response")
@@ -198,10 +205,15 @@ class BuildMaintainerPreference :
         BufferedInputStream(input).use { bis ->
             ByteArrayOutputStream().use { bos ->
                 val buffer = ByteArray(4096)
+                var totalBytesRead = 0
                 while (true) {
                     val read = bis.read(buffer)
                     if (read == -1) break
+                    if (read > MAX_OTA_RESPONSE_BYTES - totalBytesRead) {
+                        throw IOException("OTA response exceeds $MAX_OTA_RESPONSE_BYTES bytes")
+                    }
                     bos.write(buffer, 0, read)
+                    totalBytesRead += read
                 }
                 return bos.toString(StandardCharsets.UTF_8.name())
             }
@@ -231,6 +243,7 @@ class BuildMaintainerPreference :
 
     companion object {
         private const val TAG = "BuildMaintainerPreference"
+        private const val MAX_OTA_RESPONSE_BYTES = 256 * 1024L
         private const val OTA_JSON_URL =
             "https://raw.githubusercontent.com/lospandroid/" +
                 "android_vendor_LOSPOTA/refs/heads/16.0/%s.json"
