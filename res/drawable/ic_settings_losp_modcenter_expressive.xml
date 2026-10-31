@@ -1,0 +1,9 @@
+<!--
+  Copyright (C) 2026 Lineage OS Special Project (LOSP)
+
+  SPDX-License-Identifier: Apache-2.0
+-->
+<com.android.settings.widget.TintDrawable
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:drawable="@drawable/ic_modcenter_expressive"
+    android:tint="@color/homepage_losp_modcenter_foreground" />
