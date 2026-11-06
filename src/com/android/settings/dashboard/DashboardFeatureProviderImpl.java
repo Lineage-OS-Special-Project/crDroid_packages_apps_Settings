@@ -65,7 +65,7 @@ import androidx.fragment.app.FragmentActivity;
 import androidx.preference.Preference;
 import androidx.preference.TwoStatePreference;
 
-import com.android.crdroid.utils.IconTinterUtils;
+import com.android.losp.utils.IconTinterUtils;
 
 import com.android.settings.R;
 import com.android.settings.SettingsActivity;
