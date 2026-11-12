@@ -1,0 +1,5 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="losp_modcenter_title">LOSP ModCenter</string>
+    <string name="losp_modcenter_summary">Precision control for your device</string>
+</resources>
