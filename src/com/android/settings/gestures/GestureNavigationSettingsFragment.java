@@ -36,7 +36,7 @@ import androidx.preference.ListPreference;
 import androidx.preference.Preference;
 import androidx.preference.SwitchPreferenceCompat;
 
-import com.android.internal.util.crdroid.Utils;
+import com.android.internal.util.losp.Utils;
 import com.android.settings.R;
 import com.android.settings.dashboard.DashboardFragment;
 import com.android.settings.search.BaseSearchIndexProvider;
@@ -45,9 +45,9 @@ import com.android.settingslib.search.SearchIndexable;
 import com.android.settingslib.widget.ButtonPreference;
 import com.android.settingslib.widget.SliderPreference;
 
-import com.crdroid.settings.preferences.SecureSettingSwitchPreference;
-import com.crdroid.settings.utils.DeviceUtils;
-import com.crdroid.settings.utils.SystemUtils;
+import com.losp.settings.preferences.SecureSettingSwitchPreference;
+import com.losp.settings.utils.DeviceUtils;
+import com.losp.settings.utils.SystemUtils;
 
 import java.text.NumberFormat;
 import java.util.List;
